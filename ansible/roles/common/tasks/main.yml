@@ -11,7 +11,7 @@
       - "{{ apt_packages }}"
 
   - name: copy gitconfig
-    copy: src=.gitconfig dest=/home/vagrant/ owner=vagrant group=vagrant
+    copy: src=Example.gitconfig dest=/home/vagrant/.gitconfig owner=vagrant group=vagrant force=no
 
   - name: install python packages
     command: "{{ item }}"
