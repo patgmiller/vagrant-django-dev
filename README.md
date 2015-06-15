@@ -23,6 +23,10 @@ sudo ansible-galaxy install ANXS.postgresql
 
 ## Getting Started
 
-Once you've installed the required packages simply run `vagrant up` to start up your vagrant machine. It will build the machine on the first time running the command.
+Once you've installed the required packages. 
+
+1. Copy the `Vagrantfile.Example` to `Vagrantfile` 
+2. Make any desired changes to your `Vagrantfile` (optional).
+3. Run `vagrant up` to start up your vagrant machine. It will build the machine on the first time running the command.
 
  

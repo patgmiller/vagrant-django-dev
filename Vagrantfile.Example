@@ -25,7 +25,7 @@ Vagrant.configure('2') do |config|
         dev.vm.network :private_network, ip: '192.168.88.22'
         dev.vm.hostname = 'vagrantbox'
     
-        dev.vm.provision :ansible, run: 'always' do |ansible|
+        dev.vm.provision :ansible, do |ansible| # run: 'always' 
             ansible.playbook = 'ansible/main.yml'
             ansible.sudo = true
             ansible.host_key_checking = false
