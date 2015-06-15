@@ -1,0 +1,16 @@
+---
+postgresql_version: 9.4
+postgresql_default_auth_method: "trust"
+postgresql_databases:
+  - name: "vagrant"
+postgresql_users:
+  - name: "vagrant"
+    pass: "vagrant"
+postgresql_user_privileges:
+  - name: "vagrant"
+    db: "vagrant"
+    role_attr_flags: SUPERUSER
+# Extensions
+postgresql_ext_install_contrib: yes
+postgresql_ext_install_dev_headers: yes
+postgresql_ext_install_postgis: yes

@@ -1,0 +1,11 @@
+  - name: setup webserver and services
+    hosts: all
+    vars_files:
+      #- vars/nginx.yml
+      - vars/postgresql.yml
+
+    roles:
+      #- jdauphant.nginx
+      - ANXS.postgresql
+      - common
+      

@@ -1,0 +1,26 @@
+
+  - name: add ppa's
+    apt_repository: repo='{{ item }}' state=present
+    with_items:
+      - ppa:fkrull/deadsnakes
+      - ppa:git-core/ppa
+  
+  - name: install packages
+    apt: name={{ item }} state=latest update_cache=yes
+    with_flattened: 
+      - "{{ apt_packages }}"
+
+  - name: copy gitconfig
+    copy: src=.gitconfig dest=/home/vagrant/ owner=vagrant group=vagrant
+
+  - name: install python packages
+    command: "{{ item }}"
+    args:
+      chdir: /tmp/
+    with_items: 
+      - wget https://bootstrap.pypa.io/get-pip.py
+      - python2.7 get-pip.py
+      - python3.4 get-pip.py
+      - pip2.7 install {{ python2_requirements }}
+      - pip3.4 install {{ python3_requirements }}
+      - rm get-pip.py
