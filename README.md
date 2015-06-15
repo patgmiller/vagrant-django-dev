@@ -5,8 +5,9 @@ This is a basic django development machine with postgresql database that is prov
 
 ## Requirements
 
-- vagrant>=1.7.2 : Install from [downloads](http://www.vagrantup.com/downloads.html) page.
 - ansible>=1.9.1 : See [installation](http://docs.ansible.com/intro_installation.html) documentation.   
+- vagrant>=1.7.2 : Install from [downloads](http://www.vagrantup.com/downloads.html) page.
+- virtualbox>=4.3.14 : Install from [downloads](https://www.virtualbox.org/wiki/Downloads) page. 
 
 ### Playbooks
 
