@@ -4,10 +4,10 @@
     with_items:
       - ppa:fkrull/deadsnakes
       - ppa:git-core/ppa
-  
+
   - name: install packages
     apt: name={{ item }} state=latest update_cache=yes
-    with_flattened: 
+    with_flattened:
       - "{{ apt_packages }}"
 
   - name: copy gitconfig
@@ -17,10 +17,18 @@
     command: "{{ item }}"
     args:
       chdir: /tmp/
-    with_items: 
+    with_items:
       - wget https://bootstrap.pypa.io/get-pip.py
       - python2.7 get-pip.py
       - python3.4 get-pip.py
       - pip2.7 install {{ python2_requirements }}
       - pip3.4 install {{ python3_requirements }}
       - rm get-pip.py
+
+  - name: setup web directory root
+    command: "{{ item }}"
+    args:
+      creates: /var/www/
+    with_items:
+        - mkdir -p /var/www/
+        - ln -s /var/www /vagrant/www
