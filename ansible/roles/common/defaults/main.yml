@@ -2,8 +2,8 @@
 
 apt_packages: [
   'curl', 'git-core', 'python', 'python-dev',
-  'python2.7', 'python2.7-dev', 
-  'python3.4', 'python3.4-dev', 'vim', 'wget', 
+  'python2.7', 'python2.7-dev',
+  'python3.4', 'python3.4-dev', 'vim', 'wget',
 ]
-python2_requirements: flup6 ipython pip>=7 psycopg2 six>=1.8 virtualenv
-python3_requirements: flup6 ipython pip>=7 psycopg2 six>=1.8 virtualenv
+python2_requirements: flup6 ipython pip>=7 psycopg2 six>=1.8 virtualenv django<1.9
+python3_requirements: flup6 ipython pip>=7 psycopg2 six>=1.8 virtualenv django<1.9
