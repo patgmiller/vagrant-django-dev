@@ -31,5 +31,4 @@
     args:
       creates: /var/www/
     with_items:
-        - mkdir -p /var/www/
         - ln -s /vagrant/www /var/www
