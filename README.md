@@ -1,32 +1,30 @@
 # Django Development
 
-This is a basic django development machine with postgresql database that is provisioned with 
+This is a basic django development machine with postgresql database that is provisioned with
 `ansible`, `vagrant`, and `virtualbox`.
 
 ## Requirements
 
-- ansible>=1.9.1 : See [installation](http://docs.ansible.com/intro_installation.html) documentation.   
+- ansible>=1.9.1 : See [installation](http://docs.ansible.com/intro_installation.html) documentation.
 - vagrant>=1.7.2 : Install from [downloads](http://www.vagrantup.com/downloads.html) page.
-- virtualbox>=4.3.14 : Install from [downloads](https://www.virtualbox.org/wiki/Downloads) page. 
+- virtualbox>=4.3.14 : Install from [downloads](https://www.virtualbox.org/wiki/Downloads) page.
 
 ### Playbooks
 
-Requires the following ansible playbook(s). 
+Requires the following ansible playbook(s).
 
 - ANXS.postgresql, v1.1.2
 
-These playbooks can be install with the following command: 
+These playbooks can be install with the following command:
 
 ```bash
-sudo ansible-galaxy install ANXS.postgresql 
+sudo ansible-galaxy install ANXS.postgresql
 ```
 
 ## Getting Started
 
-Once you've installed the required packages. 
+Once you've installed the required packages.
 
-1. Copy the `Vagrantfile.Example` to `Vagrantfile` 
-2. Make any desired changes to your `Vagrantfile` (optional).
+1. Copy the `Vagrantfile.Example` to `Vagrantfile`, and `.gitignore.Example` to `.gitignore`.
+2. Make any desired changes to your local files `Vagrantfile` and `.gitignore` (optional).
 3. Run `vagrant up` to start up your vagrant machine. It will build the machine on the first time running the command.
-
- 
