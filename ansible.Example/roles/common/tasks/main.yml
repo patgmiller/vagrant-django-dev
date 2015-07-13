@@ -32,4 +32,4 @@
       creates: /var/www/
     with_items:
         - mkdir -p /var/www/
-        - ln -s /var/www /vagrant/www
+        - ln -s /vagrant/www /var/www
