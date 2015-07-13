@@ -1,4 +1,5 @@
 .*
 !.gitignore
+ansible
 Vagrantfile
 www
